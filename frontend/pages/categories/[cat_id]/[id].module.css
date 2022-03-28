@@ -1,0 +1,53 @@
+.container{
+    background-color: #222;
+    color: #ffffff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.container p{
+font-size: 23px;
+font-weight: 400;
+}
+.container span{
+    font-size: 23px;
+    font-weight: 400;
+ 
+}
+
+.container
+.info_job{
+    
+    border: 0.5px solid #ffffff;
+    background-color: #ffffff
+    ;
+    color: #222;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.btnApply{
+
+  width: 150px;
+  height: 37px;
+  background: #5596e6;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 30px;
+
+
+}
+.btnApply:hover{
+    background: #3070be;
+}

@@ -1,0 +1,42 @@
+.container{
+    background-color:#222;
+    color: #ffff
+    ;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 500px;
+padding: 20px;
+}
+
+.All_categ{
+    display: flex;
+    gap: 30px;
+   
+}
+.categ{
+
+    width: 200px;
+    height: 150px;
+    border: 0.5px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    gap: 20px;
+    transition: all 0.3s;
+}
+.categ:hover{
+    background-color: #f0f2f5;
+    color: #222;
+    
+}
+
+.categ a {
+    color: #1458be;
+    cursor: pointer;
+}
+

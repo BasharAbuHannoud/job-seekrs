@@ -1,0 +1,41 @@
+.containerAdd {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  border: 0.5px solid #222;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerAdd input {
+  height: 45px;
+  width: 300px;
+}
+
+.containerAdd select {
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.btn_publish {
+  width: 150px;
+  height: 37px;
+  background: #5596e6;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 30px;
+}
+
+.btn_publish:hover {
+  background: #3170bd;
+}

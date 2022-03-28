@@ -1,0 +1,128 @@
+.container {
+  background-color: #222;
+  color: #ffffff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container p {
+  font-size: 23px;
+  font-weight: 400;
+}
+.container span {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.flex_pen {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.pen {
+  font-size: 25px;
+}
+
+.pen:hover {
+  color: green;
+}
+.container .info_job {
+  border: 0.5px solid #ffffff;
+  background-color: #ffffff;
+  color: #222;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerAdd {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  height: 600px;
+  background-color: #ffffff;
+  color: #222;
+  border-radius: 7px;
+  border: 0.5px solid #222;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerAdd input {
+  height: 45px;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.containerAdd select {
+  height: 45px;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.btn_updated {
+  width: 150px;
+  height: 37px;
+  background: #5596e6;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn_updated:hover {
+  background: #3778c8;
+}
+
+.btn_delete {
+  width: 150px;
+  height: 37px;
+  background: #aa1e14;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn_delete:hover {
+  background: #83120a;
+}
+/***********************Modal Css*************************/
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(195, 195, 202, 0.5);
+}
+.modalContent {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  border-radius: 3px;
+}
+/*****************************************/
