@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/categ.module.css";
 
 const Categories = ({ data }) => {
-  console.log("categ", data);
+console.log(data);
   return (
     <div className={styles.container}>
       <h1>Categories ...</h1>
+
       <div className={styles.All_categ}>
-        {data.map((e, i) => {
+
+        {data && data.map((e, i) => {
           return (
             <div className={styles.categ} key={i}>
               {e.categorie}

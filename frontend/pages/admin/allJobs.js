@@ -4,11 +4,7 @@ import { BsPen } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-
 const AllJos = ({ data, dataCat }) => {
-  // console.log("1", data);
-  // console.log("2", dataCat);
-
   const [modal, setModal] = useState(false);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -139,7 +135,11 @@ const AllJos = ({ data, dataCat }) => {
                     >
                       <option>Categorie</option>
                       {dataCat.map((e, i) => {
-                        return <option value={e._id} key={i} >{e.categorie}</option>;
+                        return (
+                          <option value={e._id} key={i}>
+                            {e.categorie}
+                          </option>
+                        );
                       })}
                     </select>
                     <input

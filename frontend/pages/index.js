@@ -1,3 +1,4 @@
+// import * as dotenv from "dotenv";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -8,14 +9,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 
-export default function Home() {
+export default function Home({ credintials }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [name, setName] = useState("");
   const [modal, setModal] = useState(false);
-
   const router = useRouter();
   /******************************************* */
   const toggleModalsignUp = () => {
@@ -45,10 +45,6 @@ export default function Home() {
 
   /**************************************** */
   const login = async () => {
-    // if (process.env.ADMIN_USER===email && process.env.ADMIN_PASS==password ){
-    //   console.log("tses");
-    //   router.push("/admin")
-    // }
     try {
       const res = await axios.post(`http://localhost:5000/login`, {
         email,
@@ -84,7 +80,20 @@ export default function Home() {
           }}
         />
 
-        <button className={styles.btn} onClick={login}>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            login();
+            if (
+              credintials.username === email &&
+              credintials.password == password
+            ) {
+              console.log("tses");
+              router.push("/admin");
+              localStorage.setItem("admin", "admin");
+            }
+          }}
+        >
           Login
         </button>
         <span
@@ -153,3 +162,11 @@ export default function Home() {
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  const credintials = {
+    username: process.env.ADMIN_USER,
+    password: process.env.ADMIN_PASS,
+  };
+  return { props: { credintials } };
+};
